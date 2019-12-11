@@ -16,7 +16,7 @@ When preparing a report for stakeholders, it is important to have up-to-date inf
 
 ## Recording of App Functionality
 
-file:///C:/Users/miche/homework/Developer-Profile-Generator/businesscard.pdf
+(See assets folder)
 
 
 ## License
