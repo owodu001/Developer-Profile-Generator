@@ -42,6 +42,7 @@ exports.getProfile = function getProfile() {
                     followers: response.followers,
                     following: response.following,
                     GitHubStars: response.stargazers_count,
+                    blog: response.blog,
                 };
 
 
@@ -261,6 +262,8 @@ exports.getProfile = function getProfile() {
                 <div class="col d-flex justify-content-center">
                     <div class="list">
                         <a href="${googleMapsUrl}"><i class='fas fa-map-marker-alt'></i> ${response.location}</a>
+                        <a href="${response.html_url}"><i class="fab fa-github"></i>GitHub</a>
+                        <a href="${response.blog}"><i class="fas fa-blog"></i>Blog</a>
                     </div>
                 </div>
             </div>
