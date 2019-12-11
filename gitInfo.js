@@ -30,6 +30,7 @@ exports.getProfile = function getProfile() {
 
                 const response = res.data;
                 const googleMapsUrl = `https://www.google.com/maps/place/${response.location}`
+                const getStars = response.stargazers_count;
                 const result = {
                     name: response.name,
                     profileImage: response.avatar_url,
@@ -42,6 +43,7 @@ exports.getProfile = function getProfile() {
                     following: response.following,
                     GitHubStars: response.stargazers_count,
                 };
+
 
                 const colors = {
                     green: {
@@ -196,7 +198,7 @@ exports.getProfile = function getProfile() {
                              padding: 20px;
                              border-radius: 6px;
                              background-color: ${colors.pink.headerBackground};
-                             color: ${colors.blue.headerColor};
+                             color: ${colors.pink.headerColor};
                              margin: 20px;
                            }
                            
@@ -230,53 +232,53 @@ exports.getProfile = function getProfile() {
 
         <div class="container">
             <div class="row">
-                <div class="col-12 mt-5 d-flex justify-content-center">
+                <div class="photo-header img col mt-5 d-flex justify-content-center">
                     <img src="${result.profileImage}" />
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12 mt-5 d-flex justify-content-center">
+            <div class="photo-header row">
+                <div class="col mt-5 d-flex justify-content-center">
                     <h3>Hi!</h3>
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 d-flex justify-content-center">
+                <div class="col d-flex justify-content-center">
                     <h3>My name is ${response.name}</h3>
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 d-flex justify-content-center">
+                <div class="col d-flex justify-content-center">
                     <p>Currently @ ${response.location}</p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 d-flex justify-content-center">
+                <div class="col d-flex justify-content-center">
                     <div class="list">
                         <a href="${googleMapsUrl}">Currently @ ${response.location}</a>
                         <a>${response.bio}</a>
-                        <a>${response.stargazers_count}</a>
+                        <a></a>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 mb-5 mt-5 d-flex justify-content-center">
+                <div class="col mb-5 mt-5 d-flex justify-content-center">
                     <h4>${response.bio}</h4>
                 </div>
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col mt-5 d-flex justify-content-center">
+                    <div class="card col mt-5 d-flex justify-content-center">
                         <h4>Public Repositories: ${response.public_repos}</h4>
                     </div>
-                    <div class="col mt-5 d-flex justify-content-center">
+                    <div class="card col mt-5 d-flex justify-content-center">
                         <h4>Followers: ${response.followers}</h4>
                     </div>
                     <div class="w-100"></div>
-                    <div class="col mt-5 d-flex justify-content-center">
+                    <div class="card col mt-5 d-flex justify-content-center">
                         <h4>Following: ${response.following}</h4>
                     </div>
-                    <div class="col mt-5 d-flex justify-content-center">
-                        <h4>GitHub Stars: ${response.starred_url}</h4>
+                    <div class="card col mt-5 d-flex justify-content-center">
+                        <h4>GitHub Stars: ${response.stargazers_count}</h4>
                     </div>
                 </div>
             </div>
