@@ -11,7 +11,7 @@ When preparing a report for stakeholders, it is important to have up-to-date inf
 
 ## Visuals
 
-![image](https://user-images.githubusercontent.com/55159065/70592728-63b8e380-1ba0-11ea-86a9-611decf9a94d.png)
+![image](https://user-images.githubusercontent.com/55159065/70631575-f84c3180-1bf2-11ea-8b9a-6c4cb5bdbe64.png)
 
 
 ## Recording of App Functionality
