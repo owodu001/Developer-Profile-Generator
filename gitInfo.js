@@ -193,6 +193,10 @@ exports.getProfile = function getProfile() {
                              margin-top: 20px;
                              margin-bottom: 20px;
                            }
+
+                           .padding {
+                               padding-top: 25px;
+                           }
                   
                            .card {
                              padding: 20px;
@@ -229,15 +233,17 @@ exports.getProfile = function getProfile() {
                 // const imgSrc = `<img src="${result.profileImage}"/>`;
 
                 const imgSrc = `<body>
-
+<div class="wrapper">
         <div class="container">
             <div class="row">
                 <div class="photo-header img col mt-5 d-flex justify-content-center">
                     <img src="${result.profileImage}" />
                 </div>
             </div>
-            <div class="photo-header row">
-                <div class="col mt-5 d-flex justify-content-center">
+            </div>
+            <div class="row"></div>
+            <div class="row">
+                <div class="padding col mt-5 d-flex justify-content-center">
                     <h3>Hi!</h3>
                 </div>
             </div>
@@ -254,9 +260,7 @@ exports.getProfile = function getProfile() {
             <div class="row">
                 <div class="col d-flex justify-content-center">
                     <div class="list">
-                        <a href="${googleMapsUrl}">Currently @ ${response.location}</a>
-                        <a>${response.bio}</a>
-                        <a></a>
+                        <a href="${googleMapsUrl}"><i class='fas fa-map-marker-alt'></i> ${response.location}</a>
                     </div>
                 </div>
             </div>
