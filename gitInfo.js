@@ -318,6 +318,7 @@ exports.getProfile = function getProfile() {
                 console.log(err);
             });
         })
+
 };
 
 // inquirer
